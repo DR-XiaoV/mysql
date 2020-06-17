@@ -132,4 +132,6 @@ SELECT goodsId AS id, goodsName as name FROM goodsinfo ORDER BY id desc
 
 SELECT goodsId, concat(goodsName,"-",goodsinfo,"当前库存",goodsCount) AS goodsdetail FROM goodsinfo
 
-SELECT info.goodsName, info.goodsId, user.userName, user.userAddress FROM  goodsinfo as info, userInfo as user
+SELECT info.goodsName, info.goodsId, user.userName, user.userAddress FROM  goodsinfo as info, userInfo as user WHERE info.goodsId = user.userId AND user.userName = "张作霖"
+-- 查询userInfo 表中 和 goodsInfo 表中id重复的部分  并且 userName = 张作霖
+
